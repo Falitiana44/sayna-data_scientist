@@ -11,13 +11,13 @@ hash2 = hash.each {|k,v| v[0] = ''}
 
 #Crypto qui a la plus grosse valeur
 puts '-' * 10
-result = hash2.sort_by {|k,v| v.to_i}
+result = hash2.sort_by {|k,v| v.to_f}
 puts "Les crypto qui ont les plus grosses valeur sont #{result.last(5).reverse}"
 
 #Crypto qui a la plus petite valeur
 puts '-' * 10
-result = hash2.select {|k,v| v == hash2.values.min}
-puts "La crypto qui a la plus petite valeur est #{result}"
+result = hash2.sort_by {|k,v| v.to_f}
+puts "La crypto qui a la plus petite valeur est #{result.first(1)}"
 
 #Crypto contenant le mot "coin"
 puts '-' * 10
@@ -33,3 +33,4 @@ puts "Les devises dont le cours est inférieur à 6000 sont #{number.length} don
 puts '-' * 10
 result = number.sort_by {|k,v| v.to_i}
 puts "Le plus haut parmis celle-la est #{result.last(1)}."
+puts '-' * 10
