@@ -17,7 +17,7 @@ puts "Les crypto qui ont les plus grosses valeur sont #{result.last(5).reverse}"
 #Crypto qui a la plus petite valeur
 puts '-' * 10
 result = hash2.sort_by {|k,v| v.to_f}
-puts "La crypto qui a la plus petite valeur est #{result.first(1)}"
+puts "Les cryptos qui ont les plus petites valeur sont #{result.first(5)}"
 
 #Crypto contenant le mot "coin"
 puts '-' * 10
