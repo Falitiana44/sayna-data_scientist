@@ -26,11 +26,11 @@ puts "#{result.length} cryptos contiennent le mot \"coin\"."
 
 #Cours de devises inférieur à 6000
 puts '-' * 10
-number = hash2.select {|k,v| v.to_i < 6000}
+number = hash2.select {|k,v| v.to_f < 6000}
 puts "Les devises dont le cours est inférieur à 6000 sont #{number.length} dont : \n\n#{number}"
 
 #Cours le plus haut parmis celle-la
 puts '-' * 10
-result = number.sort_by {|k,v| v.to_i}
+result = number.sort_by {|k,v| v.to_f}
 puts "Le plus haut parmis celle-la est #{result.last(1)}."
 puts '-' * 10
